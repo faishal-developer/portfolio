@@ -1,0 +1,30 @@
+.social-icon-shadow,.custom-card,.about-me{
+    box-shadow: 3px 3px 3px lightgray,
+                inset 1px 1px 1px lightgray;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+.social-icon-shadow:hover{
+    transform: translatey(-5px);
+    color:white;
+    background-color: #181A1B;
+}
+
+.heading-info p{
+    color:#212428;
+}
+.heading-info h6,.social-icon-header h6,.portfolio h6{
+    color:#212428;
+    font-size: 15px;
+    font-weight: 400;
+}
+.dev-icon{
+    font-size: 45px;
+}
+.pink-color{
+    color: #FF014F !important;
+}
+.btn-bg{
+    background-color: #FF014F !important;
+    color: white !important;
+}
