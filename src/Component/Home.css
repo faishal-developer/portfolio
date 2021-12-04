@@ -1,12 +1,57 @@
-.social-icon-shadow,.custom-card,.about-me{
+.social-icon-shadow,.downLoad-resume{
     box-shadow: 3px 3px 3px lightgray,
                 inset 1px 1px 1px lightgray;
     cursor: pointer;
     transition-duration: .4s;
 }
-.social-icon-shadow:hover{
+.custom-card,.box-shadow{
+    box-shadow: 10px 5px 15px lightgray,
+                 -10px -5px 8px white;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 10px;
+}
+.box-shadow{
+    border: 0px;
+    margin-right: 13px;
+}
+.btn-active{
+    background-color: #FF014F;
+    color: white;
+   
+}
+.custom-card:hover{
+    background: #FF014F;
+    transform: translateY(-10px);
+    color: white;
+}
+.custom-card:hover  .dev-icon,.custom-card:hover .skill-icon{
+    color: white !important;
+}
+.heading-img{
+    box-shadow: 10px 5px 15px lightgray,
+                 -10px -5px 8px white;
+    border-radius: 8px;
+    background: #EDF1F3;
+}
+.heading-img img{
+    margin: -100px 0 0 0;
+}
+.is-current{
+    color:#FF014F !important;
+    background: lightgray !important;
+}
+.is-current a{
+    text-decoration: none;
+    color: #FF014F;
+}
+
+.about-me{
+    border:1px solid lightgray;
+}
+.social-icon-shadow:hover,.downLoad-resume:hover{
     transform: translatey(-5px);
-    color:white;
+    color:white !important;
     background-color: #181A1B;
 }
 
@@ -17,10 +62,12 @@
     color:#212428;
     font-size: 15px;
     font-weight: 400;
+    letter-spacing: 2px;
 }
 .dev-icon{
     font-size: 45px;
 }
+
 .pink-color{
     color: #FF014F !important;
 }
@@ -28,3 +75,24 @@
     background-color: #FF014F !important;
     color: white !important;
 }
+.my-element:hover i{
+    display: inline-block;
+    margin: 0 0.1rem;
+    color:white;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+  }
+.my-element:hover h6{
+    color: white;
+}
+
+  .nav-item-sidebar{
+      padding:20px 0;
+  }
+  .nav-item-sidebar i{
+      padding-right:10px ;
+      text-align: right;
+  }
+  .nav-item-a{
+      color: #ECF0F3;
+  }
