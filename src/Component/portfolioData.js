@@ -31,8 +31,8 @@ let data = [
         category: "Web App",
         description: 'Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. ... They are the principal means of transportation in many parts of the world. Cycling is widely regarded as an effective and efficient mode of transportation optimal for short to moderate distances.',
         link: "https://by-cycle-center.web.app/",
-        link2: "https://github.com/faishal-developer/bycycle-center-client",
-        link3: "https://github.com/faishal-developer/bycycle-server-side"
+        link2: "https://github.com/faishal-developer/by-cycle-center-client-side",
+        link3: "https://github.com/faishal-developer/by-cycle-center"
     },
     {
         id: 7,
@@ -42,7 +42,8 @@ let data = [
         heading: "Medico By React, javascript, html & css",
         category: "Web App",
         description: 'Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. ... They are the principal means of transportation in many parts of the world. Cycling is widely regarded as an effective and efficient mode of transportation optimal for short to moderate distances.',
-        link: "https://by-cycle-center.web.app/"
+        link: "https://awesome-perlman-479fb9.netlify.app/",
+        link2: "https://github.com/faishal-developer/medico"
     },
     {
         id: 8,
@@ -52,7 +53,9 @@ let data = [
         heading: "Coxs-Resort By React, javascript, html & css",
         category: "Web App",
         description: 'Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. ... They are the principal means of transportation in many parts of the world. Cycling is widely regarded as an effective and efficient mode of transportation optimal for short to moderate distances.',
-        link: "https://by-cycle-center.web.app/"
+        link: "https://coxs-resort-tourism-web.web.app/",
+        link2: "https://github.com/faishal-developer/Coxs-Resort-client-part",
+        link3: "https://github.com/faishal-developer/Coxs-Resort-server-side"
     },
     {
         id: 3,
