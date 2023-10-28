@@ -4,7 +4,7 @@ import Drawer from './Drawer';
 
 const SideNavbar = ( props ) => {
     return (
-        <aside >
+        <aside className='bg-black'>
             {/* <div className="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><a href="#section"><i className="fas fa-bars"></i></a></div> */}
             <Drawer width={props.width} handleWidth={props.handleWidth} />
             {/* 

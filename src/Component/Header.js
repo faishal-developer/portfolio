@@ -13,14 +13,14 @@ const Header = () => {
                         <h1 className="fw-bold fs-1">Hi, I'm <span className='pink-color'>Md. Faishal</span></h1>
                         <h1 className='fw-bold fs-1'>a <Typical
                             className='d-inline pink-color'
-                            steps={['Front-end Developer', 2000, 'React Developer', 2000, 'Javascript Developer', 2000]}
+                            steps={['Fullstack developer',3000,'Front-end Developer', 3000, 'React Developer', 3000, 'Javascript Developer', 3000]}
                             loop={Infinity}
                             wrapper="p"
                         /></h1>
-                        <p>I am learning web development for 2 years. I spend whole day in programming .
-                            About 9-10 hours per day. I leaved all my favourites and found new love and that’s
-                            programming. I am fresher but passionate. I not worked in professional Project but I
-                            created my base with learning and that is time to work in Professional Project.</p>
+                        <p>I am passionate and dedicated in programming, working in this field for 3 years. I worked in Shadhin tech for 9
+                        months. I am highly confident to work with web-technologies and switch technology. Besides i solved more than
+                        150 problems in codewars,leetcode, and edabit.com for growing logical thinking.
+                        .</p>
                     </div>
                     <div className='social-icon-header my-5'>
                         <h6>FIND WITH ME</h6>
@@ -46,7 +46,7 @@ const Header = () => {
                             </a><br />
                         </div>
                         <div className='downLoad-resume d-inline-block'>
-                            <a className="btn my-element" href='https://drive.google.com/file/d/1s_GaH9eFImr4KzjpTFcQ24-G60MAhVDE/view?usp=sharing' target="_blank" rel="noreferrer">
+                            <a className="btn my-element" href='https://drive.google.com/file/d/18GqcXIbzuqAvfgMTpOq5hglKi0Y-kKyb/view?usp=sharing' target="_blank" rel="noreferrer">
                                 <h6>Download Resume</h6>
                                 <div><i className="far animate__animated fa-arrow-alt-circle-down"></i></div>
                             </a>

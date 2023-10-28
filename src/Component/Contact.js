@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import faishal from '../image/DSC_0041.JPG'
+import faishal from '../image/DSC_004110.jpg'
 
 const Contact = () => {
     const [message, setMessage] = useState( {} )
@@ -14,7 +14,7 @@ const Contact = () => {
     const handleSubmit = ( e ) => {
         e.preventDefault();
         console.log( message );
-        window.emailjs.sendForm( 'service_zbhpnje', 'template_8gkiylb', e.target, 'user_Lhpxa8zDgxXqvZ4wjJGbv' )
+        window.emailjs.sendForm( 'service_qb84vk6', 'template_qgdt7gg', e.target, 'NuqZsopa7W0X0-DnT' )
             .then( res => {
                 e.target.reset()
                 let alert = { message: 'Email sent to Md Faishal', isSuccess: true }

@@ -1,10 +1,10 @@
-.social-icon-shadow,.downLoad-resume{
+/* .social-icon-shadow,.downLoad-resume{
     box-shadow: 3px 3px 3px lightgray,
                 inset 1px 1px 1px lightgray;
     cursor: pointer;
     transition-duration: .4s;
-}
-.custom-card,.box-shadow{
+} */
+.custom-card,.box-shadow,.social-icon-shadow,.downLoad-resume,.about-me{
     box-shadow: 10px 5px 15px lightgray,
                  -10px -5px 8px white;
     cursor: pointer;
@@ -46,13 +46,13 @@
     color: #FF014F;
 }
 
-.about-me{
+/* .about-me{
     border:1px solid lightgray;
-}
+} */
 .social-icon-shadow:hover,.downLoad-resume:hover{
     transform: translatey(-5px);
     color:white !important;
-    background-color: #181A1B;
+    background-color: #FF014F;
 }
 
 .heading-info p{
@@ -94,5 +94,9 @@
       text-align: right;
   }
   .nav-item-a{
-      color: #ECF0F3;
+      color: #ECF0F3 ;
+  }
+
+  .bg-black nav{
+    background-color: black;
   }

@@ -9,7 +9,9 @@ const Resume = ( props ) => {
                     <div className='pink-color'><i className={`skill-icon ${skill.icon} fs-1`}></i></div>
                     <div>
                         <h3>{skill.name}</h3>
-                        <p style={{ textAlign: 'justify' }}>{skill.description}</p>
+                        {props.skills===familiar?'':(
+                            <p style={{ textAlign: 'justify' }}>{skill.description}</p>
+                        )}
                     </div>
                 </div>
             )
@@ -19,7 +21,7 @@ const Resume = ( props ) => {
 }
 
 const Skills = () => {
-    const [skills, setSkills] = useState( { skill: 'experties' } )
+    const [skills, setSkills] = useState( { skill: 'Good At' } )
 
     const skillHandler = ( skill ) => {
         let newSkill = { skill }
@@ -35,7 +37,7 @@ const Skills = () => {
     }
 
     const skillsName = () => {
-        if ( skills.skill === 'experties' ) {
+        if ( skills.skill === 'Good At' ) {
             return experties
         }
         else if ( skills.skill === 'familiar' ) {
@@ -48,7 +50,7 @@ const Skills = () => {
     return (
         <div className="my-5 py-5 text-center">
             <div>
-                <button onClick={() => skillHandler( 'experties' )} className={findClassName( 'experties' )}>Experties</button>
+                <button onClick={() => skillHandler( 'Good At' )} className={findClassName( 'Good At' )}>Good At</button>
                 <button onClick={() => skillHandler( 'familiar' )} className={findClassName( 'familiar' )}>Familiar</button>
                 <button onClick={() => skillHandler( 'tools' )} className={findClassName( 'tools' )}>Tools</button>
             </div>
