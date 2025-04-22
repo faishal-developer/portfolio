@@ -1,6 +1,8 @@
 import React from 'react';
 import Faishal1 from '../image/DSC_0240.png'
 import Typical from 'react-typical'
+import Typewriter from 'typewriter-effect';
+
 
 
 const Header = () => {
@@ -11,16 +13,30 @@ const Header = () => {
                     <div className='heading-info'>
                         <h6>WELCOME TO MY WORLD</h6>
                         <h1 className="fw-bold fs-1">Hi, I'm <span className='pink-color'>Md. Faishal</span></h1>
-                        <h1 className='fw-bold fs-1'>a <Typical
-                            className='d-inline pink-color'
-                            steps={['Fullstack developer',3000,'Front-end Developer', 3000, 'React Developer', 3000, 'Javascript Developer', 3000]}
-                            loop={Infinity}
-                            wrapper="p"
-                        /></h1>
-                        <p>I am passionate and dedicated in programming, working in this field for 3 years. I worked in Shadhin tech for 9
-                        months. I am highly confident to work with web-technologies and switch technology. Besides i solved more than
-                        150 problems in codewars,leetcode, and edabit.com for growing logical thinking.
-                        .</p>
+                        <h1 className='fw-bold fs-1 d-flex'>
+                            <span className='me-1'>a</span>
+                            {/* <Typical
+                                key={1}
+                                className='d-inline pink-color'
+                                steps={['Fullstack developer',4000,'Front-end Developer', 4000, 'React Developer', 4000, 'Javascript Developer', 4000]}
+                                loop={Infinity}
+                                wrapper="p"
+                            /> */}
+                            <span className='d-inline pink-color'>
+                                <Typewriter
+                                    wrapperClassName="d-inline pink-color"
+                                    options={{
+                                        strings: ['Fullstack developer', 'React.js Developer',"Node.js Developer"],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </span>
+
+                        </h1>
+                        <p>Detail-oriented programmer with a strong foundation in Typescript, React.js, Node.js. Successfully tackled over
+                        150 coding challenges on platforms like LeetCode, Codewars, and Edabit.com. Committed to staying updated with
+                        industry trends and best practices. Seeking a challenging role to contribute to innovative software projects.</p>
                     </div>
                     <div className='social-icon-header my-5'>
                         <h6>FIND WITH ME</h6>
@@ -46,7 +62,7 @@ const Header = () => {
                             </a><br />
                         </div>
                         <div className='downLoad-resume d-inline-block'>
-                            <a className="btn my-element" href='https://drive.google.com/file/d/18GqcXIbzuqAvfgMTpOq5hglKi0Y-kKyb/view?usp=sharing' target="_blank" rel="noreferrer">
+                            <a className="btn my-element" href='https://drive.google.com/file/d/13wOBAVRm_Wzgko2FQMWXT_7rGGnu_-Ur/view?usp=sharing' target="_blank" rel="noreferrer">
                                 <h6>Download Resume</h6>
                                 <div><i className="far animate__animated fa-arrow-alt-circle-down"></i></div>
                             </a>

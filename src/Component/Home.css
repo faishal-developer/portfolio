@@ -36,6 +36,7 @@
 }
 .heading-img img{
     margin: -100px 0 0 0;
+    /* margin-bottom: 30px; */
 }
 .is-current{
     color:#FF014F !important;

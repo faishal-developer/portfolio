@@ -32,7 +32,7 @@ const Home = () => {
     }
     return (
         <>
-            <div>
+            <div style={{maxWidth:"1500px",margin:'auto'}}>
                 <SideNavbar width={width} handleWidth={handleWidth} />
 
                 <div style={isWide} className="py-5">

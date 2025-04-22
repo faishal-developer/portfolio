@@ -12,9 +12,9 @@ const MyPortfolio = () => {
                     {
                         data.map( ( item, i ) => (
                             <div key={i} className="col">
-                                <div className="card">
-                                    <figure className="c4-izmir c4-border-ccc-3">
-                                        <img src={item.image} alt="Sample" />
+                                <div  className="card">
+                                    <figure   className="c4-izmir c4-border-ccc-3">
+                                        <img style={{height:"310px"}}  src={item.image} alt="Sample" />
                                         <figcaption>
                                             <div className="c4-reveal-up">
                                                 <h6 className='text-light fw-bold'>

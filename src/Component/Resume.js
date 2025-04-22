@@ -6,7 +6,13 @@ const Resume = ( props ) => {
         <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
             {props.skills.map( ( skill, i ) => (
                 <div key={i} class="col custom-card text-justify p-3 ">
-                    <div className='pink-color'><i className={`skill-icon ${skill.icon} fs-1`}></i></div>
+                    <div className='pink-color'>
+                        {skill.image?(
+                            <img style={{width:"35px",height:"35px"}} src={skill.image}/>
+                        ):(
+                         <i className={`skill-icon ${skill.icon} fs-1`}></i>
+                        )}
+                    </div>
                     <div>
                         <h3>{skill.name}</h3>
                         {props.skills===familiar?'':(
@@ -21,7 +27,7 @@ const Resume = ( props ) => {
 }
 
 const Skills = () => {
-    const [skills, setSkills] = useState( { skill: 'Good At' } )
+    const [skills, setSkills] = useState( { skill: 'Experties' } )
 
     const skillHandler = ( skill ) => {
         let newSkill = { skill }
@@ -37,7 +43,7 @@ const Skills = () => {
     }
 
     const skillsName = () => {
-        if ( skills.skill === 'Good At' ) {
+        if ( skills.skill === 'Experties' ) {
             return experties
         }
         else if ( skills.skill === 'familiar' ) {
@@ -50,7 +56,7 @@ const Skills = () => {
     return (
         <div className="my-5 py-5 text-center">
             <div>
-                <button onClick={() => skillHandler( 'Good At' )} className={findClassName( 'Good At' )}>Good At</button>
+                <button onClick={() => skillHandler( 'Experties' )} className={findClassName( 'Experties' )}>Experties</button>
                 <button onClick={() => skillHandler( 'familiar' )} className={findClassName( 'familiar' )}>Familiar</button>
                 <button onClick={() => skillHandler( 'tools' )} className={findClassName( 'tools' )}>Tools</button>
             </div>

@@ -9,11 +9,35 @@ import faishal2 from '../image/faishal-edited.png'
 
 function Drawer( props ) {
     const [expanded, setExpanded] = useState( false )
+    const [width,setWidth]=useState(1600);
+
+
+    useEffect(()=>{
+        window.addEventListener('resize',(e)=>{
+            setWidth(window.innerWidth)
+            if(window.innerWidth>1500){
+                setExpanded(true)
+            }else{
+                setExpanded(false)
+            }
+        })
+    },[])
+
+    const style=()=>{
+        let obj = {position:"relative"}
+        if(width>1600){
+            obj.left="10vw"
+        }else if(width<1600){
+            obj.left="0vw"
+        }
+        console.log(obj)
+        return obj
+    }
 
 
     return (
 
-        <div className={props.width > 650 ? 'd-block' : 'd-none'}>
+        <div style={style()} className={props.width > 650 ? 'd-block' : 'd-none'}>
             <SideNav
                 className="position-fixed max-width"
                 expanded={expanded}
