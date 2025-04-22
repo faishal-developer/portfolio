@@ -2,9 +2,9 @@ import React from 'react';
 
 const WhatIDo = () => {
     return (
-        <div className="container my-5">
-            <p className='pink-color'>FEATURES</p>
-            <h1>WHAT I DO</h1>
+        <div className="container my-5 py-5">
+            <p className='pink-color '>FEATURES</p>
+            <h1 className='my-4'>WHAT I DO</h1>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5 ">
                 <div className="col">
                     <div className='custom-card p-3'>

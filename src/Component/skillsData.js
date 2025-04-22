@@ -14,6 +14,23 @@ import problemsolving from '../image/icons/problemsolving.png'
 import redux from '../image/icons/redux.png'
 import tailwind from '../image/icons/tailwind.png'
 import ts from '../image/icons/ts.png'
+import algorithm_black from '../image/icons/algorithm_black.png'
+import bootstrap_black from '../image/icons/bootstrap_black.png'
+import cPlus_black from '../image/icons/cPlus_black.png'
+import c_black from '../image/icons/c_black.png'
+import db_black from '../image/icons/db_black.png'
+import express_black from '../image/icons/express_black.png'
+import function_black from '../image/icons/function_black.png'
+import mongodb_black from '../image/icons/mongodb_black.png'
+import nest_black from '../image/icons/nest_black.png'
+import next_black from '../image/icons/next_black.png'
+import postgress_black from '../image/icons/postgress_black.png'
+import prisma_black from '../image/icons/prisma_black.png'
+import problem_black from '../image/icons/problem_black.png'
+import redux_black from '../image/icons/redux_black.png'
+import tailwind_black from '../image/icons/tailwind_black.png'
+import ts_black from '../image/icons/ts_black.png'
+
 
 export const experties = [
     {
@@ -41,6 +58,7 @@ export const familiar = [
         name: 'Typescript',
         description: `Level: Comfortable`,
         image:ts,
+        black_img:ts_black,
         icon: 'fa-solid fa-pen-nib'
     },
     {
@@ -48,6 +66,7 @@ export const familiar = [
         name: 'Nest.js',
         description: `Level: Comfortable`,
         image:nest,
+        black_img:nest_black,
         icon: 'fa-solid fa-pen-nib'
     },
     {
@@ -55,6 +74,7 @@ export const familiar = [
         name: 'Postgresql',
         description: `Level: Comfortable`,
         image:postgress,
+        black_img:postgress_black,
         icon: 'fa-solid fa-database'
     },
     {
@@ -62,6 +82,7 @@ export const familiar = [
         name: 'Express.js',
         description: 'Level: Comfortable',
         image:express,
+        black_img:express_black,
         icon: 'fab fa-node-js'
     },
     {
@@ -69,6 +90,7 @@ export const familiar = [
         name: 'Mongodb & Mongoose',
         description: 'Level: Comfortable',
         image:Mongodb,
+        black_img:mongodb_black,
         icon: 'fa-solid fa-database'
     },
     {
@@ -76,6 +98,7 @@ export const familiar = [
         name: 'Prisma',
         description: 'Level: Beginer',
         image:prisma,
+        black_img:prisma_black,
         icon: 'fa-solid fa-rainbow'
     },
     {
@@ -83,6 +106,7 @@ export const familiar = [
         name: 'Next.js',
         description: 'Level: Comfortable',
         image:next,
+        black_img:next_black,
         icon: 'fa-solid fa-atom'
     },
     {
@@ -90,6 +114,7 @@ export const familiar = [
         name: 'ReduxToolkit & RTK query',
         description: 'Level: Comfortable',
         image:redux,
+        black_img:redux_black,
         icon: 'fa-solid fa-atom'
     },
     {
@@ -97,6 +122,7 @@ export const familiar = [
         name: 'C',
         description: 'Level: Beginer',
         image:c,
+        black_img:c_black,
         icon: 'fa-solid fa-c'
     },
     {
@@ -104,6 +130,7 @@ export const familiar = [
         name: 'C++',
         description: 'Level: Beginer',
         image:cPlusPlus,
+        black_img:cPlus_black,
         icon: 'fa-solid fa-c'
     },
     {
@@ -111,6 +138,7 @@ export const familiar = [
         name: 'Problem solving',
         description: 'Level: Beginer',
         image:problemsolving,
+        black_img:problem_black,
         icon: "fa-solid fa-circle-exclamation"
     },
     {
@@ -118,6 +146,7 @@ export const familiar = [
         name: 'Datastructure',
         description: 'Level: Good',
         image:datastructure,
+        black_img: db_black,
         icon: "fa-solid fa-folder-tree"
     },
     {
@@ -125,6 +154,7 @@ export const familiar = [
         name: 'Algorithms',
         description: 'Level: Good',
         image:algorithm,
+        black_img: algorithm_black,
         icon: "fa-brands fa-algolia"
     },
     {
@@ -132,6 +162,7 @@ export const familiar = [
         name: 'Tailwind',
         description: 'Level: very beginner',
         image:tailwind,
+        black_img:tailwind_black,
         icon: "fa-brands fa-css3"
     },
     {
@@ -139,6 +170,7 @@ export const familiar = [
         name: 'Ant design',
         description: 'Level: very beginner',
         image:"",
+        black_img:"",
         icon: "fa-brands fa-css3"
     },
     {
@@ -146,6 +178,7 @@ export const familiar = [
         name: 'Bootstrap',
         description: 'Level: Comfortable',
         image:bootstrap,
+        black_img:bootstrap_black,
         icon: "fa-brands fa-css3"
     },
     {
@@ -153,6 +186,7 @@ export const familiar = [
         name: 'Functional Programming',
         description: 'Level: Comfortable',
         image:functional,
+        black_img:function_black,
         icon: "fa-solid fa-robot"
     },
     {
@@ -160,6 +194,7 @@ export const familiar = [
         name: 'OOP',
         description: 'Level: beginner',
         image:"",
+        black_img:"",
         icon: "fa-solid fa-bullseye"
     },
     {
@@ -167,6 +202,7 @@ export const familiar = [
         name: 'Material Ui',
         description: `Level: Comfortable.`,
         image:"",
+        black_img:"",
         icon: 'fab fa-maxcdn'
     },
     {
@@ -174,6 +210,7 @@ export const familiar = [
         name: 'Firebase Authentication',
         description: `Level: Comfortable.`,
         image:"",
+        black_img:"",
         icon: "fa-brands fa-square-google-plus"
     }
 ]

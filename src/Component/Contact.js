@@ -24,6 +24,11 @@ const Contact = () => {
                 let alert = { message: er.message, isSuccess: false }
                 setSuccess( alert )
             } )
+            .finally( () => {
+                let alert = { message: 'Email sent to Md Faishal', isSuccess: true }
+                setSuccess( alert )
+                setMessage( {} )
+            })
     }
     return (
         <div className="container my-5 text-center">

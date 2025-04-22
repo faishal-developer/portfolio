@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.skills_icons:hover .hidden_icon{
+  display: inline-block;
+}
+.skills_icons:hover .visible_icon{
+  display: none;
+}
+.skills_icons .hidden_icon{
+  display: none;
+}
+
+.experience-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}

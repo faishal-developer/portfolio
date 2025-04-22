@@ -5,10 +5,13 @@ const Resume = ( props ) => {
     return (
         <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
             {props.skills.map( ( skill, i ) => (
-                <div key={i} class="col custom-card text-justify p-3 ">
-                    <div className='pink-color'>
+                <div key={i} class="col custom-card text-justify p-3 skills_icons">
+                    <div className='pink-color skills_icons'>
                         {skill.image?(
-                            <img style={{width:"35px",height:"35px"}} src={skill.image}/>
+                            <>
+                                <img className='visible_icon' style={{width:"35px",height:"35px"}} src={skill.image}/>
+                                <img className='hidden_icon' style={{width:"35px",height:"35px"}} src={skill.black_img}/>
+                            </>
                         ):(
                          <i className={`skill-icon ${skill.icon} fs-1`}></i>
                         )}

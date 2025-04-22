@@ -52,11 +52,17 @@ function Drawer( props ) {
                 </NavItem>
                 <SideNav.Toggle />
                 <SideNav.Nav defaultSelected="home">
-                    <Scrollspy className="px-3" items={['section-1', 'section-2', 'section-3', 'section-4', 'section-5']} currentClassName="is-current">
+                    <Scrollspy className="px-3" items={['section-1', 'section-1.2','section-2', 'section-3', 'section-4', 'section-5']} currentClassName="is-current">
                         <a className='nav-item-a' href="#section-1">
                             <NavItem className='nav-item-sidebar' eventKey="home">
                                 <i className="fa fa-fw fa-home" style={{ fontSize: "1.75em" }} />
                                 <span className={!expanded ? 'd-none' : 'd-inline-block'}>Home</span>
+                            </NavItem>
+                        </a>
+                        <a className='nav-item-a' href="#section-1.2">
+                            <NavItem className='nav-item-sidebar' eventKey="features">
+                                <i style={{ fontSize: "1.75em" }} className="fa-solid fa-briefcase"></i>
+                                <span className={!expanded ? 'd-none' : 'd-inline-block'}>Experience</span>
                             </NavItem>
                         </a>
                         <a className='nav-item-a' href="#section-2">

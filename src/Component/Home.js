@@ -7,6 +7,7 @@ import MyPortfolio from './MyPortfolio';
 import WhatIDo from './MyServices';
 import SideNavbar from './SideNavbar';
 import Skills from './Resume';
+import Experience from './Experience';
 
 const Home = () => {
     const [isWide, setIsWide] = useState( { maxWidth: '90%', marginLeft: '10%' } )
@@ -37,6 +38,7 @@ const Home = () => {
 
                 <div style={isWide} className="py-5">
                     <section id="section-1"><Header /></section>
+                    <section id="section-1.2"><Experience /></section>
                     <section id="section-2"><WhatIDo /></section>
                     <section id="section-3"><MyPortfolio /></section>
                     <section id="section-4"><Skills /></section>
