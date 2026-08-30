@@ -1,5 +1,5 @@
 import React from 'react';
-import Faishal1 from '../image/DSC_0240.png'
+import Faishal1 from '../image/mdfaishal.png'
 import Typical from 'react-typical'
 import Typewriter from 'typewriter-effect';
 
@@ -26,7 +26,7 @@ const Header = () => {
                                 <Typewriter
                                     wrapperClassName="d-inline pink-color"
                                     options={{
-                                        strings: ['Fullstack developer', 'React.js Developer',"Node.js Developer"],
+                                        strings: ['Fullstack developer', 'React.js Developer', "Node.js Developer"],
                                         autoStart: true,
                                         loop: true,
                                     }}
@@ -34,9 +34,9 @@ const Header = () => {
                             </span>
 
                         </h1>
-                        <p>Detail-oriented programmer with a strong foundation in Typescript, React.js, Node.js. Successfully tackled over
-                        150 coding challenges on platforms like LeetCode, Codewars, and Edabit.com. Committed to staying updated with
-                        industry trends and best practices. Seeking a challenging role to contribute to innovative software projects.</p>
+                        <p>Full Stack Software Engineer with 3+ years of experience building scalable web applications using TypeScript,Node.js,
+                            Mysql, React, and Next.js. Experienced in backend development, payment gateway integration, performance optimi
+                            zation, and cloud infrastructure.</p>
                     </div>
                     <div className='social-icon-header my-5'>
                         <h6>FIND WITH ME</h6>
@@ -62,7 +62,7 @@ const Header = () => {
                             </a><br />
                         </div>
                         <div className='downLoad-resume d-inline-block'>
-                            <a className="btn my-element" href='https://drive.google.com/file/d/13wOBAVRm_Wzgko2FQMWXT_7rGGnu_-Ur/view?usp=sharing' target="_blank" rel="noreferrer">
+                            <a className="btn my-element" href='https://drive.google.com/file/d/15bw1McsGaAXOfOqSdzfMzeQqFlzrjA9s/view?usp=sharing' target="_blank" rel="noreferrer">
                                 <h6>Download Resume</h6>
                                 <div><i className="far animate__animated fa-arrow-alt-circle-down"></i></div>
                             </a>
