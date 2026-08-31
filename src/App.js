@@ -8,7 +8,7 @@ import './App.css'
 function App() {
 
   useEffect(()=>{
-    document.title = "Md Faishal | Fullstack Developer";
+    document.title = "Md Faishal | Full Stack Software Engineer";
     const link = document.createElement("link");
     link.rel = "shortcut icon";
     link.href = logo;

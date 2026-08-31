@@ -1,91 +1,119 @@
 import React, { useState } from 'react';
-import faishal from '../image/DSC_004110.jpg'
 
 const Contact = () => {
-    const [message, setMessage] = useState( {} )
-    const [sucees, setSuccess] = useState( {} )
+    const [copiedEmail, setCopiedEmail] = useState(false);
+    const [copiedPhone, setCopiedPhone] = useState(false);
 
-    const handleChange = ( e ) => {
-        let newMessage = { ...message };
-        newMessage[e.target.name] = e.target.value;
-        setMessage( newMessage )
-    }
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText('md.faishal.dev@gmail.com');
+        setCopiedEmail(true);
+        setTimeout(() => setCopiedEmail(false), 2500);
+    };
 
-    const handleSubmit = ( e ) => {
-        e.preventDefault();
-        console.log( message );
-        window.emailjs.sendForm( 'service_qb84vk6', 'template_qgdt7gg', e.target, 'NuqZsopa7W0X0-DnT' )
-            .then( res => {
-                e.target.reset()
-                let alert = { message: 'Email sent to Md Faishal', isSuccess: true }
-                setSuccess( alert )
-            } )
-            .catch( er => {
-                let alert = { message: er.message, isSuccess: false }
-                setSuccess( alert )
-            } )
-            .finally( () => {
-                let alert = { message: 'Email sent to Md Faishal', isSuccess: true }
-                setSuccess( alert )
-                setMessage( {} )
-            })
-    }
+    const handleCopyPhone = () => {
+        navigator.clipboard.writeText('+880-1853837981');
+        setCopiedPhone(true);
+        setTimeout(() => setCopiedPhone(false), 2500);
+    };
+
     return (
-        <div className="container my-5 text-center">
-            <p className='mt-5 pink-color'>CONTACT</p>
-            <h2 className="mb-5">Contact With Me</h2>
-            <div className="row row-cols-1 row-cols-lg-2">
-                <div className="col text-start about-me">
-                    <div className='p-2'>
-                        <img className='w-100' src={faishal} alt="faishal" />
-                    </div>
-                    <h2>Md. Faishal</h2>
-                    <p>Front-end Developer</p>
-                    <p>Fell free to contact. I am available for freelance work. Connect with me via and call in to my account.</p>
-                    <p>Phone:<span className="pink-color">+880-1688422699</span></p>
-                    <p>Email:<span className="pink-color">foysal.professional@gmail.com</span></p>
-                    <div className='social-icon-header my-5'>
-                        <h6>FIND WITH ME</h6>
-                        <div className="d-flex text-center">
-                            <div className='me-3 social-icon-shadow'>
-                                <i className="p-3 fab fa-facebook"></i>                            </div>
-                            <div className='me-3 social-icon-shadow'>
-                                <i className="p-3 fab fa-github"></i>
+        <div className="container-fluid px-0 my-4 my-md-5 py-3 py-md-4 text-center">
+            <p className='pink-color fw-semibold mb-1' style={{ letterSpacing: '2px' }}>GET IN TOUCH</p>
+            <h2 className="fw-bold mb-3">Contact Me</h2>
+            <p className="text-secondary mx-auto mb-4 mb-md-5" style={{ maxWidth: '650px', fontSize: '1rem', lineHeight: '1.7' }}>
+                I am actively open to mid-level Full Stack Software Engineer roles, production backend/frontend contracts, and distributed remote teams. Feel free to reach out directly through any of the channels below.
+            </p>
+
+            <div className="row g-4 justify-content-center text-start">
+                {/* Email Card */}
+                <div className="col-12 col-md-6 col-lg-3">
+                    <div className="custom-card box-shadow p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div className="pink-color mb-3">
+                                <i className="fas fa-envelope-open-text fs-2"></i>
                             </div>
-                            <div className='me-3 social-icon-shadow'>
-                                <i className="p-3 fab fa-linkedin-in"></i>
-                            </div>
+                            <h3 className="fs-5 fw-bold mb-1">Email</h3>
+                            <p className="text-secondary small mb-3">Direct mailbox</p>
+                            <p className="fw-semibold text-break mb-3" style={{ fontSize: '0.9rem' }}>
+                                md.faishal.dev@gmail.com
+                            </p>
+                        </div>
+                        <div className="d-flex gap-2 flex-wrap">
+                            <a href="mailto:md.faishal.dev@gmail.com" className="btn btn-sm btn-danger px-2 px-sm-3 py-2 flex-grow-1 text-decoration-none text-center">
+                                <i className="fas fa-paper-plane me-1"></i> Send Mail
+                            </a>
+                            <button onClick={handleCopyEmail} className="btn btn-sm btn-outline-secondary px-3 py-2" title="Copy Email">
+                                <i className={copiedEmail ? "fas fa-check text-success" : "far fa-copy"}></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div className="col">
-                    <form onSubmit={handleSubmit}>
-                        <div className='d-flex justify-content-between'>
 
-                            <input required onChange={handleChange} name="name" placeholder="Your Name" className='form-control me-2' />
-                            <input required onChange={handleChange} name='phone' placeholder="Your Phone" className='form-control' type='number' />
+                {/* Phone Card */}
+                <div className="col-12 col-md-6 col-lg-3">
+                    <div className="custom-card box-shadow p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div className="pink-color mb-3">
+                                <i className="fas fa-phone-volume fs-2"></i>
+                            </div>
+                            <h3 className="fs-5 fw-bold mb-1">Phone & WhatsApp</h3>
+                            <p className="text-secondary small mb-3">Direct call or message</p>
+                            <p className="fw-semibold text-break mb-3" style={{ fontSize: '0.92rem' }}>
+                                +880-1853837981
+                            </p>
                         </div>
-                        <br />
-                        <input required onChange={handleChange} name='email' placeholder="Your Email" className='form-control' type='email' /><br />
-                        <input required onChange={handleChange} name='subject' placeholder="Subject" className='form-control' type='text' /><br />
-                        <textarea required onChange={handleChange} name='message' placeholder='Your Message' style={{ minHeight: '100px' }} className='form-control' /><br />
-                        <input type='submit' className='btn btn-bg' />
-                    </form>
-                    {
-                        sucees?.isSuccess ? (
-                            sucees?.message && <div className="alert my-3 alert-success" role="alert">
-                                <i className="far fs-5 px-3 text-success fa-check-circle"></i>
-                                {sucees.message}
-                            </div>
-                        ) : (
-                            sucees?.message && <div className="alert my-3 alert-danger" role="alert">
-                                <i className="far fs-5 px-3 text-danger fa-times-circle"></i>
-                                {sucees.message}
-                            </div>
-                        )
-                    }
+                        <div className="d-flex gap-2 flex-wrap">
+                            <a href="tel:+8801853837981" className="btn btn-sm btn-danger px-2 px-sm-3 py-2 flex-grow-1 text-decoration-none text-center">
+                                <i className="fas fa-phone me-1"></i> Call Now
+                            </a>
+                            <button onClick={handleCopyPhone} className="btn btn-sm btn-outline-secondary px-3 py-2" title="Copy Phone">
+                                <i className={copiedPhone ? "fas fa-check text-success" : "far fa-copy"}></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
+                {/* LinkedIn Card */}
+                <div className="col-12 col-md-6 col-lg-3">
+                    <div className="custom-card box-shadow p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div className="pink-color mb-3">
+                                <i className="fab fa-linkedin-in fs-2"></i>
+                            </div>
+                            <h3 className="fs-5 fw-bold mb-1">LinkedIn</h3>
+                            <p className="text-secondary small mb-3">Professional network</p>
+                            <p className="fw-semibold text-break mb-3" style={{ fontSize: '0.9rem' }}>
+                                /in/md-faishal-4bb8b3219
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/md-faishal-4bb8b3219/" target="_blank" rel="noreferrer" className="btn btn-sm btn-danger w-100 py-2 text-decoration-none text-center">
+                                <i className="fab fa-linkedin me-1"></i> Connect on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* GitHub Card */}
+                <div className="col-12 col-md-6 col-lg-3">
+                    <div className="custom-card box-shadow p-3 p-md-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div className="pink-color mb-3">
+                                <i className="fab fa-github fs-2"></i>
+                            </div>
+                            <h3 className="fs-5 fw-bold mb-1">GitHub</h3>
+                            <p className="text-secondary small mb-3">Code & contributions</p>
+                            <p className="fw-semibold text-break mb-3" style={{ fontSize: '0.9rem' }}>
+                                @faishal-developer
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://github.com/faishal-developer" target="_blank" rel="noreferrer" className="btn btn-sm btn-dark w-100 py-2 text-decoration-none text-center">
+                                <i className="fab fa-github me-1"></i> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

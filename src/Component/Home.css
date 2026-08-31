@@ -4,100 +4,253 @@
     cursor: pointer;
     transition-duration: .4s;
 } */
-.custom-card,.box-shadow,.social-icon-shadow,.downLoad-resume,.about-me{
+.custom-card,
+.box-shadow,
+.social-icon-shadow,
+.downLoad-resume,
+.about-me {
     box-shadow: 10px 5px 15px lightgray,
-                 -10px -5px 8px white;
+        -10px -5px 8px white;
     cursor: pointer;
     transition: .5s;
     border-radius: 10px;
 }
-.box-shadow{
+
+.box-shadow {
     border: 0px;
-    margin-right: 13px;
 }
-.btn-active{
-    background-color: #FF014F;
-    color: white;
-   
-}
-.custom-card:hover{
-    background: #FF014F;
-    transform: translateY(-10px);
-    color: white;
-}
-.custom-card:hover  .dev-icon,.custom-card:hover .skill-icon{
+
+.btn-active {
+    background-color: #FF014F !important;
     color: white !important;
 }
-.heading-img{
+
+.custom-card:hover {
+    background: #FF014F !important;
+    transform: translateY(-10px);
+    color: white !important;
+}
+
+.custom-card:hover h1,
+.custom-card:hover h2,
+.custom-card:hover h3,
+.custom-card:hover h4,
+.custom-card:hover h5,
+.custom-card:hover h6,
+.custom-card:hover p,
+.custom-card:hover span,
+.custom-card:hover li,
+.custom-card:hover strong,
+.custom-card:hover small,
+.custom-card:hover .text-dark,
+.custom-card:hover .text-secondary,
+.custom-card:hover .text-muted,
+.custom-card:hover .pink-color,
+.custom-card:hover i,
+.custom-card:hover .dev-icon,
+.custom-card:hover .skill-icon,
+.custom-card:hover .company-name,
+.custom-card:hover .position,
+.custom-card:hover .duration {
+    color: #ffffff !important;
+}
+
+.custom-card:hover .p-2.rounded.mb-3 {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-left-color: #ffffff !important;
+}
+
+.custom-card:hover .badge.bg-secondary,
+.custom-card:hover .badge.bg-light {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.custom-card:hover .badge.bg-danger {
+    background-color: #ffffff !important;
+    color: #FF014F !important;
+}
+
+.custom-card:hover .btn-outline-secondary {
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+.custom-card:hover .btn-danger {
+    background-color: #ffffff !important;
+    color: #FF014F !important;
+    border-color: #ffffff !important;
+}
+
+.custom-card:hover .btn-dark {
+    background-color: rgba(0, 0, 0, 0.35) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.custom-card:hover .border-top {
+    border-top-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.heading-img {
     box-shadow: 10px 5px 15px lightgray,
-                 -10px -5px 8px white;
+        -10px -5px 8px white;
     border-radius: 8px;
     background: #EDF1F3;
+    /* overflow: hidden; */
 }
-.heading-img img{
+
+.heading-img img {
     margin: -100px 0 0 0;
     /* margin-bottom: 30px; */
 }
-.is-current{
-    color:#FF014F !important;
-    background: lightgray !important;
+
+.is-current {
+    color: #FF014F !important;
+    /* background: lightgray !important; */
 }
-.is-current a{
+
+.is-current a {
     text-decoration: none;
     color: #FF014F;
 }
 
-/* .about-me{
-    border:1px solid lightgray;
-} */
-.social-icon-shadow:hover,.downLoad-resume:hover{
+.social-icon-shadow:hover,
+.downLoad-resume:hover {
     transform: translatey(-5px);
-    color:white !important;
+    color: white !important;
     background-color: #FF014F;
 }
 
-.heading-info p{
-    color:#212428;
+.heading-info p {
+    color: #212428;
 }
-.heading-info h6,.social-icon-header h6,.portfolio h6{
-    color:#212428;
+
+.heading-info h6,
+.social-icon-header h6,
+.portfolio h6 {
+    color: #212428;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 2px;
 }
-.dev-icon{
+
+.dev-icon {
     font-size: 45px;
 }
 
-.pink-color{
+.pink-color {
     color: #FF014F !important;
 }
-.btn-bg{
+
+.btn-bg {
     background-color: #FF014F !important;
     color: white !important;
 }
-.my-element:hover i{
+
+.my-element:hover i {
     display: inline-block;
     margin: 0 0.1rem;
-    color:white;
-    animation: bounce; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1s; /* don't forget to set a duration! */
-  }
-.my-element:hover h6{
+    color: white;
+    animation: bounce;
+    animation-duration: 1s;
+}
+
+.my-element:hover h6 {
     color: white;
 }
 
-  .nav-item-sidebar{
-      padding:20px 0;
-  }
-  .nav-item-sidebar i{
-      padding-right:10px ;
-      text-align: right;
-  }
-  .nav-item-a{
-      color: #ECF0F3 ;
-  }
+.nav-item-sidebar {
+    padding: 16px 0;
+}
 
-  .bg-black nav{
+.nav-item-sidebar i {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.nav-item-a {
+    color: #ECF0F3;
+    padding-left: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item-a:hover {
+    color: #FF014F;
+}
+
+.bg-black nav {
     background-color: black;
-  }
+}
+
+/* Fluid responsive typography */
+.hero-name {
+    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+    line-height: 1.2;
+    word-break: break-word;
+}
+
+.hero-typewriter-title {
+    font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-backdrop {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1040;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    background: rgba(255, 1, 79, 0.2);
+    color: #FF014F;
+}
+
+.mobile-nav-link i {
+    width: 30px;
+    font-size: 1.2rem;
+    margin-right: 12px;
+    color: #FF014F;
+}
+
+/* Sidebar scroll fix & transition */
+.desktop-sidebar-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: black;
+    height: 100vh;
+}
+
+.main-content-layout {
+    transition: margin-left 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+}
