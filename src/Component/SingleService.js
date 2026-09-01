@@ -1,27 +1,28 @@
-// import React from 'react';
-// import { useParams } from 'react-router';
-// import data from './portfolioData';
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import data from './portfolioData';
 
-// const SingleService = () => {
-//     const { serviceId } = useParams()
+const SingleService = () => {
+    const { serviceId } = useParams();
+    const findData = data.find((v) => String(v.id) === String(serviceId));
 
-//     const findData = data.find( ( v ) => v.id == serviceId )
-//     console.log( findData );
-//     return (
-//         <div className="container">
-//             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-//                 <div className="col">
-//                     <img className="w-50" src={findData.image} alt="data" />
-//                 </div>
-//                 <div className="col">
-//                     <img className="w-50" src={findData.image1} alt="data" />
-//                 </div>
-//                 <div className="col">
-//                     <img className="w-50" src={findData.image2} alt="data" />
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
+    if (!findData) {
+        return (
+            <div className="container py-5 text-center">
+                <h2>Project Not Found</h2>
+                <Link to="/" className="btn btn-danger mt-3">Back to Home</Link>
+            </div>
+        );
+    }
 
-// export default SingleService;
+    return (
+        <div className="container py-5">
+            <h2 className="mb-4">{findData.heading}</h2>
+            <img className="w-100 rounded mb-4" src={findData.image} alt={findData.heading} style={{ maxHeight: '400px', objectFit: 'cover' }} />
+            <p className="text-secondary">{findData.summary}</p>
+            <Link to="/" className="btn btn-outline-danger1 mt-3">Back to Home</Link>
+        </div>
+    );
+};
+
+export default SingleService;
