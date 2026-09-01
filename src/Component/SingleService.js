@@ -20,9 +20,9 @@ const SingleService = () => {
             <h2 className="mb-4">{findData.heading}</h2>
             <img className="w-100 rounded mb-4" src={findData.image} alt={findData.heading} style={{ maxHeight: '400px', objectFit: 'cover' }} />
             <p className="text-secondary">{findData.summary}</p>
-            <Link to="/" className="btn btn-outline-danger mt-3">Back to Home</Link>
+            <Link to="/" className="btn btn-outline-danger1 mt-3">Back to Home</Link>
         </div>
     );
 };
 
-export default SingleService;
+export default SingleService;

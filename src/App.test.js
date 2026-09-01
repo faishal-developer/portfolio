@@ -15,7 +15,6 @@ describe('Portfolio Component & Responsiveness Tests', () => {
     expect(screen.getAllByText(/Divergent Technologies Limited/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/Doodle Incorporation/i).length).toBeGreaterThan(0);
 
-
     // Services
     expect(screen.getAllByText(/WHAT I DO/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/Full Stack Web Development/i)).toBeInTheDocument();
@@ -25,7 +24,6 @@ describe('Portfolio Component & Responsiveness Tests', () => {
 
     // Skills
     expect(screen.getAllByText(/Skills & Capabilities/i).length).toBeGreaterThan(0);
-
 
     // Education
     expect(screen.getByText(/Academic Background/i)).toBeInTheDocument();
@@ -46,18 +44,10 @@ describe('Portfolio Component & Responsiveness Tests', () => {
     expect(screen.getByText(/AWS Cloud Services/i)).toBeInTheDocument();
   });
 
-  test('opens and closes project case study modal', () => {
+  test('renders direct link to Case Studies page from projects section', () => {
     render(<App />);
-    const caseStudyBtns = screen.getAllByRole('button', { name: /Case Study & Architecture/i });
-    expect(caseStudyBtns.length).toBeGreaterThan(0);
-    
-    fireEvent.click(caseStudyBtns[0]);
-    expect(screen.getByText(/Measurable Production Outcomes/i)).toBeInTheDocument();
-    expect(screen.getByText(/Architecture & Engineering Scope/i)).toBeInTheDocument();
-
-    const closeBtn = screen.getByText(/^Close$/i);
-    fireEvent.click(closeBtn);
-    expect(screen.queryByText(/Measurable Production Outcomes/i)).not.toBeInTheDocument();
+    const caseStudyLinks = screen.getAllByRole('link', { name: /View Case Studies/i });
+    expect(caseStudyLinks.length).toBeGreaterThan(0);
   });
 
   test('mobile navigation toggle works correctly', () => {
@@ -70,6 +60,71 @@ describe('Portfolio Component & Responsiveness Tests', () => {
     const mobileNavLinks = screen.getAllByRole('link', { name: /Experience/i });
     expect(mobileNavLinks.length).toBeGreaterThan(0);
   });
+
+  test('renders polished footer with navigation, status badge, and back-to-top interaction', () => {
+    window.scrollTo = jest.fn();
+    render(<App />);
+    
+    // Status badge & branding
+    expect(screen.getByText(/Open to opportunities/i)).toBeInTheDocument();
+    expect(screen.getByText(/Quick Navigation/i)).toBeInTheDocument();
+    expect(screen.getByText(/Connect & Reach Out/i)).toBeInTheDocument();
+    
+    // Back to top button interaction
+    const backToTopBtn = screen.getByRole('button', { name: /Scroll back to top/i });
+    expect(backToTopBtn).toBeInTheDocument();
+    fireEvent.click(backToTopBtn);
+    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+  });
+
+  test('renders Case Studies listing page when navigating to /case-studies', () => {
+    window.history.pushState({}, 'Case Studies', '/case-studies');
+    render(<App />);
+
+    expect(screen.getByText(/Production technical case studies documenting database architecture/i)).toBeInTheDocument();
+    expect(screen.getByText(/My Playlist & Folder Management/i)).toBeInTheDocument();
+    expect(screen.getByText(/OTP API Abuse Prevention/i)).toBeInTheDocument();
+
+    // Verify Back to Portfolio button is present
+    const backBtn = screen.getByText(/Back to Portfolio/i);
+    expect(backBtn).toBeInTheDocument();
+  });
+
+  test('renders Case Study detail page with all technical sections when navigating to /case-studies/otp-api-abuse-prevention', () => {
+    window.history.pushState({}, 'Case Study Detail', '/case-studies/otp-api-abuse-prevention');
+    render(<App />);
+
+    expect(screen.getByRole('heading', { name: /OTP API Abuse Prevention/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Overview$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^The Attack$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Why Phone-Based Limits Were Insufficient$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Why IP Blocking Was Not Enough$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^PassKey System Architecture$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Additional CAPTCHA Layer$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Security Considerations$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Challenges & Trade-offs$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Results \/ Current Status$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Engineering Takeaway$/i })).toBeInTheDocument();
+
+    // Verify Back to Case Studies button
+    const backButtons = screen.getAllByText(/Back to Case Studies/i);
+    expect(backButtons.length).toBeGreaterThan(0);
+  });
+
+  test('renders Case Study detail page for My Playlist when navigating to /case-studies/my-playlist-folder-management', () => {
+    window.history.pushState({}, 'Case Study Detail', '/case-studies/my-playlist-folder-management');
+    render(<App />);
+
+    expect(screen.getByRole('heading', { name: /My Playlist & Folder Management/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Overview$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^The Initial Assumption$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Database Design$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Data Integrity & Business Rules$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Authentication & Authorization$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Rate Limiting$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Origin Restrictions$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Testing & Deployment$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Challenges & Trade-offs$/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /^Engineering Takeaway$/i })).toBeInTheDocument();
+  });
 });
-
-

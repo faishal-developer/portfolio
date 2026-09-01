@@ -108,7 +108,7 @@ const Contact = () => {
                             </p>
                         </div>
                         <div>
-                            <a href="https://github.com/faishal-developer" target="_blank" rel="noreferrer" className="btn btn-sm btn-dark w-100 py-2 text-decoration-none text-center">
+                            <a href="https://github.com/faishal-developer" target="_blank" rel="noreferrer" className="btn btn-sm btn-danger w-100 py-2 text-decoration-none text-center">
                                 <i className="fab fa-github me-1"></i> View GitHub
                             </a>
                         </div>

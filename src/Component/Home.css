@@ -28,7 +28,7 @@
 .custom-card:hover {
     background: #FF014F !important;
     transform: translateY(-10px);
-    color: white !important;
+    color: white;
 }
 
 .custom-card:hover h1,
@@ -67,7 +67,7 @@
     border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
-.custom-card:hover .badge.bg-danger {
+.custom-card:hover .badge.bg-danger1 {
     background-color: #ffffff !important;
     color: #FF014F !important;
 }
@@ -93,6 +93,37 @@
     border-top-color: rgba(255, 255, 255, 0.3) !important;
 }
 
+/* Inner component hover adaptations for diagram placeholders & flow step cards */
+.custom-card:hover .case-study-diagram-box {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #ffffff !important;
+}
+
+.custom-card:hover .case-study-code-block {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.custom-card:hover .case-study-step-card {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.custom-card:hover .case-study-step-card h6,
+.custom-card:hover .case-study-step-card p,
+.custom-card:hover .case-study-diagram-box h6,
+.custom-card:hover .case-study-diagram-box p {
+    color: #ffffff !important;
+}
+
+.custom-card:hover .badge.bg-warning {
+    background-color: #ffffff !important;
+    color: #FF014F !important;
+}
+
 .heading-img {
     box-shadow: 10px 5px 15px lightgray,
         -10px -5px 8px white;
@@ -108,12 +139,15 @@
 
 .is-current {
     color: #FF014F !important;
-    /* background: lightgray !important; */
 }
 
-.is-current a {
+.is-current a,
+a.is-current,
+.nav-item-a.is-current,
+.nav-item-a.is-current span,
+.nav-item-a.is-current i {
     text-decoration: none;
-    color: #FF014F;
+    color: #FF014F !important;
 }
 
 .social-icon-shadow:hover,
@@ -181,13 +215,31 @@
     color: #FF014F;
 }
 
+.bg-danger1 {
+    background-color: #FF014F !important;
+}
+
+.btn-outline-danger1 {
+    /* border: 1px solid #FF014F !important; */
+    /* color: #FF014F !important; */
+}
+
+.btn-outline-danger1:hover {
+    background-color: #FF014F !important;
+    /* color: white !important; */
+}
+
+.text-danger1 {
+    color: #FF014F !important;
+}
+
 .bg-black nav {
     background-color: black;
 }
 
 /* Fluid responsive typography */
 .hero-name {
-    font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+    /* font-size: clamp(1.75rem, 4.5vw, 2.75rem); */
     line-height: 1.2;
     word-break: break-word;
 }
@@ -253,4 +305,138 @@
     min-height: 100vh;
     box-sizing: border-box;
     width: 100%;
+}
+
+/* ==========================================================================
+   Footer Component Styles
+   ========================================================================== */
+.footer-section {
+    position: relative;
+}
+
+.footer-divider {
+    height: 1px;
+    background: #d8dde3;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    width: 100%;
+}
+
+.footer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08), -4px -4px 10px #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.footer-heading {
+    color: #212428;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.footer-nav-list li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-link {
+    color: #555e68;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-link-arrow {
+    font-size: 0.65rem;
+    color: #adb5bd;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #FF014F;
+    transform: translateX(4px);
+}
+
+.footer-link:hover .footer-link-arrow {
+    color: #FF014F;
+}
+
+.footer-social-btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #212428 !important;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-social-btn:hover {
+    color: #ffffff !important;
+}
+
+.badge-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #28a745;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(40, 167, 69, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+.footer-back-to-top {
+    box-shadow: 5px 5px 10px lightgray, -5px -5px 10px white;
+    background-color: #ECF0F3;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    color: #212428;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.footer-back-to-top:hover {
+    background-color: #FF014F;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 1, 79, 0.3);
+}
+
+.footer-bottom {
+    border-top-color: #d8dde3 !important;
+}
+
+@media (max-width: 576px) {
+    .footer-heading {
+        margin-top: 0.5rem;
+    }
+
+    .footer-social-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
 }
